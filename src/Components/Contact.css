@@ -1,0 +1,47 @@
+.contact {
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-contact input {
+    height: 200px;
+    width: 100%;
+}
+
+.send-contact-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+#send-contact-request {
+    width: 100px;
+}
+
+@media (min-width: 750px) {
+    .email-contact {
+        display: flex;
+        align-items: center;
+    }
+
+    #email-input-contact {
+        height: 35px;
+        margin-left: 15px;
+        width: 250px;
+    }
+
+    #send-contact-request {
+        width: 200px;
+        height: 50px;
+    }
+}

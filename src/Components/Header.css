@@ -1,0 +1,71 @@
+.header {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+    .site-title {
+        margin-left: 15px;
+    }
+
+    .header h1 {
+        margin-bottom: 0px;
+    }
+
+    .header p {
+        margin-top: 0px;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+    }
+
+    .cart-icon, .menu-icon {
+        margin-right: 15px;
+    }
+
+    .cart-icon {
+        margin-left: auto;
+        position: relative;
+    }
+
+        .cart-counter {
+            background-color: white;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            text-align: center;
+            color: black;
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            font-size: 10px;
+            line-height: 15px;
+        }
+
+
+/* svg-icon and all its styles are for the shopping cart placeholder. These SHOULD BE DELETED once the final shopping cart image is in place*/
+.svg-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: black;
+  }
+  
+  .svg-icon circle {
+    stroke: black;
+    stroke-width: 2;
+  }
+
+@media(min-width: 1200px) {
+    .menu-icon {
+        display: none;
+    }
+}

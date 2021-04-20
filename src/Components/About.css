@@ -1,0 +1,44 @@
+.about {
+    background-color: lemonchiffon;
+}
+
+.about-nate-bio {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.about-bio-image {
+    height: 100px;
+    float: left;
+}
+
+.about-bio-image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 750px) {
+    .about-nate-bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+    }
+
+    .about-nate-bio p {
+        width: 80%;
+    }
+
+    .about-bio-image {
+        float: none;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .featured-display-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

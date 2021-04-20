@@ -1,0 +1,8 @@
+@media (min-width: 1200px) {
+    .artworks-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,30 @@
+.resume {
+    text-align: left;
+    padding: 10px;
+}
+
+.resume-section-header {
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+.outerul {
+    padding: 5px;
+}
+
+.innerul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.resume-bold {
+    font-weight: bold;
+}
+
+.accordian-content-hidden {
+    display: none;
+}
+
+.accordion-content-displayed {
+    display: block;
+}
