@@ -4,10 +4,11 @@ import Menu from './Components/Menu';
 import Subscribe from './Components/Subscribe';
 import Footer from './Components/Footer';
 import routes from './routes';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { Component } from 'react';
 import { getArtworkData, setCartData } from './redux/reducers/artworkReducer';
 import { connect } from 'react-redux';
+const Router = process.env.NODE_ENV === 'development' ? HashRouter : BrowserRouter;
 
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
   
   render() {
     return (
-      <HashRouter>
+      <Router>
         <div className="App">
           <Header />
           <div className="menu-flex-container">
@@ -41,7 +42,7 @@ class App extends Component {
           <Subscribe />
           <Footer />
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 }

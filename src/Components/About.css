@@ -1,10 +1,10 @@
-.about {
-    background-color: lemonchiffon;
-}
 
 .about-nate-bio {
-    background-color: lightblue;
     padding: 10px;
+}
+
+.about-nate-bio hr {
+    width: 80%;
 }
 
 .about-bio-image {

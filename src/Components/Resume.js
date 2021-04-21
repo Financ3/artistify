@@ -81,8 +81,8 @@ toggleDisplay = (ev) => {
                 <h2 className="view-header">Resume/CV:</h2>
                 <h2 className="resume-section-header" id="education-header" onClick={this.toggleDisplay}>
                     {this.state.educationDisplay?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Education
                 </h2>
                 <div className={this.state.educationDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="education-content">
@@ -95,8 +95,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header" id="exhibition-header"  onClick={this.toggleDisplay}>
                     {this.state.exhibitionDisplay?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Exhibitions
                         </h2>
                 <div className={this.state.exhibitionDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="exhbitions-content">
@@ -207,8 +207,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header" id="public-installs-header" onClick={this.toggleDisplay}>
                     {this.state.publicInstallDisplay?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Public Installations
                         </h2>
                 <div className={this.state.publicInstallDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="public-installations-content">
@@ -229,8 +229,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header" id="scholarships-header" onClick={this.toggleDisplay}>
                     {this.state.scholarshipDisplay?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Scholarships
                         </h2>
                 <div className={this.state.scholarshipDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="scholarships-content">
@@ -252,8 +252,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header"  id="awards-grants-header" onClick={this.toggleDisplay}>
                     {this.state.awardsGrantsDisplay ?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Awards &#38; Grants
                         </h2>
                 <div className={this.state.awardsGrantsDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="awards-grants-content">
@@ -279,8 +279,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header"  id="publications-header" onClick={this.toggleDisplay}>
                     {this.state.publicationsDisplay ?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Publications
                         </h2>
                 <div className={this.state.publicationsDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="publications-content">
@@ -336,8 +336,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header" id="professional-experience-header" onClick={this.toggleDisplay}>
                     {this.state.professionalExperienceDisplay ?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Professional Experience
                         </h2>
                 <div className={this.state.professionalExperienceDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="professionaly-experience-content">
@@ -405,8 +405,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header" id="related-experience-header" onClick={this.toggleDisplay}>
                     {this.state.relatedExperienceDisplay ?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Related Experience
                         </h2>
                 <div className={this.state.relatedExperienceDisplay?"accordion-content-displayed":"accordian-content-hidden"} id="related-experience-content">
@@ -451,8 +451,8 @@ toggleDisplay = (ev) => {
 
                 <h2 className="resume-section-header" id="skills-header" onClick={this.toggleDisplay}>
                     {this.state.skillsDisplay ?
-                        <span className='accordion-icon'>-</span>:
-                        <span className='accordion-icon'>+</span>}
+                        <span className='accordion-icon'> - </span>:
+                        <span className='accordion-icon'> + </span>}
                         Skills
                         </h2>
                 <div className={this.state.skillsDisplay?"accordion-content-displayed":"accordian-content-hidden"}id="skills-content">

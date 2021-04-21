@@ -32,16 +32,18 @@ class Subscribe extends Component {
   render() {
     return (
       <div className="subscribe">
-        <div className="subscribe-text">
-            <h2>Subscribe:</h2>
-            <p>
-                Get updates on new pieces, events, and shows where Nate’s work can be seen.
-            </p>
-        </div>
-        <div className="subscribe-form">
-            <input placeholder="Your email here..." onChange={this.handleUserInput}></input>
-            <button id="subscribe-button" onClick={this.submitSubscriber}>Subscribe</button>
-            <div>{this.state.isSubscribed?<p>Thanks for subscribing!</p>:null}</div>
+        <div className="subscribe-container">
+          <div className="subscribe-text">
+              <h2>Subscribe:</h2>
+              <p>
+                  Get updates on new pieces, events, and shows where Nate’s work can be seen.
+              </p>
+          </div>
+          <div className="subscribe-form">
+              <input placeholder="Your email here..." onChange={this.handleUserInput}></input>
+              <button id="subscribe-button" onClick={this.submitSubscriber}>Subscribe</button>
+              <div>{this.state.isSubscribed?<p>Thanks for subscribing!</p>:null}</div>
+          </div>
         </div>
       </div>
     )

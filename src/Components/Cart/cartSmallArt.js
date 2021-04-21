@@ -16,14 +16,19 @@ function CartSmallArt(props) {
     }
     */
 
-  // const removeFromCart = () => {
-  //   //remove the item from the redux cart
-  //   props.removeFromCart(props.cartItem);
+  const removeFromCart = () => {
+    //create the new shopping cart object for local storage
+    let shoppingCart = [...props.shoppingCart];
+    let cartItem = props.cartItem;
+    let indexToRemove = shoppingCart.indexOf(cartItem);
+    shoppingCart.splice(indexToRemove, 1);
 
-  //   //remove the item from the local storage cart
-  //   console.log(props.shoppingCart);
-  //   // localStorage.setItem('cart', JSON.stringify(props.shoppingCart));
-  // }
+    //remove the item from the redux cart
+    props.removeFromCart(props.cartItem);
+
+    //remove the item from the local storage cart
+    localStorage.setItem('cart', JSON.stringify(shoppingCart));
+  }
 
   return (
     <div className="cart-small-art">
@@ -44,7 +49,7 @@ function CartSmallArt(props) {
               <p><b>Total Item Cost:</b> <span className="span-right-align">${props.cartItem.totalAmount}</span></p>
             </div>
           </div>
-          <button>Remove From Cart</button>
+          <button className="remove-from-cart" onClick={removeFromCart}>Remove From Cart</button>
         </div>  
       </div>
     </div>

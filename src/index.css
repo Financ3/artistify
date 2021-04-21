@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -9,13 +11,21 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   font-size: 12px;
   padding: 0px 10px;
+}
+
+a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
 }
 
 h1 {
@@ -36,10 +46,17 @@ code {
 }
 
 .view-header {
+  color: #222222;
   text-align: left;
-  border-bottom: black solid 2px;
-  border-top: black solid 2px;
+  border: #222222 solid 1px;
   width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.view-header a:hover {
+  color: #9b9b9b;
 }
 
 @media (min-width: 750px) {

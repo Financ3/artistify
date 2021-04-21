@@ -1,10 +1,11 @@
 .header {
-    background-color: grey;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: left;
+    color: #222222;
+    z-index: 3;
 }
 
     .site-title {
@@ -33,18 +34,26 @@
     }
 
         .cart-counter {
-            background-color: white;
+            background-color: #818181;
             border-radius: 50%;
             height: 15px;
             width: 15px;
             text-align: center;
-            color: black;
+            color: white;
             position: absolute;
             bottom: -5px;
             left: -5px;
             font-size: 10px;
             line-height: 15px;
         }
+    
+    .cart-icon-svg path {
+        fill: #A3A3A3;
+    }
+
+    .menu-icon-svg rect {
+        fill: #A3A3A3;
+    }
 
 
 /* svg-icon and all its styles are for the shopping cart placeholder. These SHOULD BE DELETED once the final shopping cart image is in place*/
@@ -56,16 +65,21 @@
   .svg-icon path,
   .svg-icon polygon,
   .svg-icon rect {
-    fill: black;
+    fill: #222222;
   }
   
   .svg-icon circle {
-    stroke: black;
+    stroke: #222222;
     stroke-width: 2;
   }
 
 @media(min-width: 1200px) {
     .menu-icon {
         display: none;
+    }
+
+    .header {
+        background-color: white;
+        width: 19%;
     }
 }

@@ -51,6 +51,11 @@ app.use(session({
     //checkout a cart
     app.post("/api/checkout", checkController.checkout);
 
+    app.use(express.static(__dirname + '/../build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../build/index.html'))
+    });
+
 
 //establish the database connection and start the server
 massive({

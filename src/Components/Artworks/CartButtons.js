@@ -154,9 +154,9 @@ class CartButtons extends Component {
           </div>
           <div className="cart-buttons-quantity-div">
             <p>Quantity:</p>
-            <input value={this.state.cartItem.quantity} readOnly></input>
+            <input className="quantity" value={this.state.cartItem.quantity} readOnly></input>
     
-            <button className="increment-quantity" onClick={this.incrementCartQuantity}>&#9650;</button>
+            <button id="increment-quantity" onClick={this.incrementCartQuantity}>&#9650;</button>
     
             <button id="decrement-quantity" onClick={this.decrementCartQuantity}>&#9660;</button>
     

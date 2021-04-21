@@ -18,12 +18,7 @@ function SmallArt(props) {
           </div>
           <div className="small-art-p-button-container">
             <p>{props.artwork.description}</p>
-            {(props.source==="artworks" || props.source==="about")?<Link to={{
-                pathname: `/single-art/${props.artwork.id}`,
-                state: {
-                  source: props.source
-                }
-              }}><button>Buy Prints</button></Link>:null}
+            
           </div>
         </div>
         

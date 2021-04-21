@@ -33,6 +33,7 @@ function About(props) {
             </div>
           
             <p>This is a bunch of text about how great Nate is and all the stuff that he has accomplished with his Art. Other text and stuff. So much text - its like a full on biography. WOW. SUCH WOW.<br/><br/>This is even more cool text about how awesome Nate is and all the stuff that he has done including some of the reasons why he does it, and how exactly he does it. <br/><br/>This is even more cool text about how awesome Nate is and all the stuff that he has done including some of the reasons why he does it, and how exactly he does it. </p>
+            <hr></hr>
       </article>
       <div className="featured-display-flex-container">
         {featuredDisplay}

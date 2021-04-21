@@ -1,6 +1,6 @@
 .subscribe {
-    background-color: maroon;
     padding: 5px 0px;
+    color: #222222;
 }
 
 .subscribe-form {
@@ -14,6 +14,15 @@
 #subscribe-button {
     margin: 10px 0px;
     cursor: pointer;
+    background-color: #A3A3A3;
+    border: none; 
+    color: #E4E4E4;
+    height: 25px;
+    width: 100px;
+}
+
+#subscribe-button:hover {
+    color: white;
 }
 
 @media (min-width: 750px) {
@@ -22,7 +31,14 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 30px;
+        padding: 0px 30px 15px 30px;
+    }
+
+    .subscribe-container {
+        width: 80%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
 
         .subscribe-text {
@@ -33,7 +49,7 @@
         .subscribe-form {
             height: 100%;
             justify-content: space-between;
-            padding-left: 30px;
+            padding: 0px;
         }
 
             #subscribe-button {
@@ -46,15 +62,17 @@
 @media (min-width: 1200px) {
     .subscribe {
         position: absolute;
-        width: 29%;
-        top: 450px;
+        width: 20%;
+        top: 425px;
         left: 10px;
         max-width: 1125px;
         flex-direction: column;
+        z-index: 1;
     }
 
     .subscribe-text {
         width: 90%;
+        min-width: 180px;
     }
 
     .subscribe-form {
