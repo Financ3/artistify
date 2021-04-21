@@ -2,8 +2,14 @@ module.exports = {
     //GET getAllArt (gets all art objects from the DB and returns them in an array)
     getArt: async function(req, res) {
         const db = req.app.get('db');
-        let allArt = await db.artworks.get_all_art();
-        res.status(200).send(allArt);
+        try {
+            let allArt = await db.artworks.get_all_art();
+            res.status(200).send(allArt);
+        } catch (err) {
+            res.status(500).senc(err);
+        }
+        
+        
     },
     createArt: async function(req, res) {
         //POST createArt (creates a new art object and inserts it into the DB)
