@@ -15,9 +15,14 @@ class Artworks extends Component {
       <div className="artworks">
         <h2 className="view-header">Artworks:</h2>
         <div className="artworks-flex-container">
-          {this.props.artworksArray.map(singleArtwork => {
-            return <SmallArt artwork={singleArtwork} key={singleArtwork.id} isAdmin={false} source="artworks"/>
-          })}
+          {this.props.asyncStatus==="pending"?
+            <p>Loading...</p>:
+            this.props.asyncStatus==="rejected"?
+              <p>There was an error retreiving the artists data. Please contact the artist so they can resolve.</p>:
+              this.props.asyncStatus==="fulfilled"?
+                this.props.artworksArray.map(singleArtwork => {
+                  return <SmallArt artwork={singleArtwork} key={singleArtwork.id} isAdmin={false} source="artworks"/>}):
+                null}
         </div>
       </div>
     )
@@ -27,7 +32,8 @@ class Artworks extends Component {
 function mapStateToProps(state) {
   return {
     isAdmin: state.isAdmin,
-    artworksArray: state.artworksArray
+    artworksArray: state.artworksArray,
+    asyncStatus: state.asyncStatus
   }
 }
   
