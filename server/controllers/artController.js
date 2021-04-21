@@ -6,7 +6,7 @@ module.exports = {
             let allArt = await db.artworks.get_all_art();
             res.status(200).send(allArt);
         } catch (err) {
-            res.status(500).senc(err);
+            res.status(500).send(err);
         }
         
         
