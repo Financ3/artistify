@@ -8,8 +8,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send(err);
         }
-        
-        
+        res.status(500).send("An unknown error occurred");
     },
     createArt: async function(req, res) {
         //POST createArt (creates a new art object and inserts it into the DB)
