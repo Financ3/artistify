@@ -26,6 +26,7 @@ class CartButtons extends Component {
 
   componentDidUpdate() {
     //check that this isn't the first mounting, when the artwork is not yet returned from the API
+    console.log(this.props.artwork);
     if (this.props.artwork) {
       //update the ID if the URL has a new query string parameter
       if (this.props.artwork.id !== this.state.cartItem.artworkId) {
@@ -36,7 +37,7 @@ class CartButtons extends Component {
             artworkId: this.props.artwork.id,
             title: this.props.artwork.title,
             description: this.props.artwork.description,
-            image: 'placeholder URL'
+            media: this.props.artwork.media
           }
         });
       }
