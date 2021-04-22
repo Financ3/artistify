@@ -63,7 +63,7 @@ massive({
     ssl: {
         rejectUnauthorized: false
     }
-}, {scripts: './../db'})
+}, {scripts: path.join(__dirname, '../db')})
 .then(dbInstance => {
     app.set('db', dbInstance);
     app.listen(SERVER_PORT, () => {
