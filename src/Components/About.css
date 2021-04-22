@@ -7,9 +7,12 @@
     width: 80%;
 }
 
+.about-nate-bio p {
+    padding: 5px;
+}
+
 .about-bio-image {
     height: 100px;
-    float: left;
 }
 
 .about-bio-image img {
@@ -35,7 +38,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
     .featured-display-flex-container {
         display: flex;
         flex-wrap: wrap;

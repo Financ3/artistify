@@ -47,6 +47,9 @@ app.use(session({
     //add new subscriber
     app.post('/api/subscribers/', subController.addSubscriber);
 
+    //send message to artist
+    app.post('/api/contact', subController.contactArtist);
+
 //Checkout endpoint
     //checkout a cart
     app.post("/api/checkout", checkController.checkout);

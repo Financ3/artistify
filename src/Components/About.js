@@ -32,7 +32,12 @@ function About(props) {
                 <img alt="Nathan Francis" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/79103947_2645076688904747_4208698857770450944_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=vMPd9mGR1OUAX-iE8JZ&_nc_ht=scontent-dfw5-1.xx&oh=93aa1364d1ebc0293ba951f51740bd9f&oe=609B7822" />
             </div>
           
-            <p>This is a bunch of text about how great Nate is and all the stuff that he has accomplished with his Art. Other text and stuff. So much text - its like a full on biography. WOW. SUCH WOW.<br/><br/>This is even more cool text about how awesome Nate is and all the stuff that he has done including some of the reasons why he does it, and how exactly he does it. <br/><br/>This is even more cool text about how awesome Nate is and all the stuff that he has done including some of the reasons why he does it, and how exactly he does it. </p>
+            <p>Nate Francis is a photographic and sculptural artist who works with issues of identity and
+              isolation. He often appears in his own work by documenting his body or performing for the
+              camera. Nate grew up in Provo, Utah in an LDS family of nine children. His work explores the
+              consequences of his upbringing in the Church of Jesus Christ of Latter-Day Saints as a gay youth,
+              the challenge of creating a home after coming out, as well as the hope of finding a new and
+              more suitable environment in the future.</p>
             <hr></hr>
       </article>
       <h2>Featured Pieces:</h2>

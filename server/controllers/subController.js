@@ -44,8 +44,36 @@ module.exports = {
             console.log(err)
             res.status(500).send(err);
         }
-        
-
-        
+    },
+    contactArtist: async function(req, res) {
+        const {GMAIL_USERNAME, GMAIL_PASSWORD} = process.env;
+        const {email, text} = req.body;
+        //SETUP nodemailer
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth:  {
+                user: GMAIL_USERNAME,
+                pass: GMAIL_PASSWORD
+            }
+        });
+        //create message to send to artist
+        let mailOptions = {
+            from: email,
+            to: GMAIL_USERNAME,
+            subject: 'Contact/Commission request from your online gallery',
+            text: text
+        }
+        //send the email
+        transporter.sendMail(mailOptions, (err) => {
+            if (err) {
+                console.log("Error Occured: ", err);
+                //respond with a successful status but a warning message
+                res.status(500).send(err);
+            }
+            else {
+                console.log('Email sent!');
+                res.sendStatus(200);
+            }
+        });
     }
 }

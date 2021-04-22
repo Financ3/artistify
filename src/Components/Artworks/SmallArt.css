@@ -1,4 +1,6 @@
-
+.small-art {
+    border-top: 1px solid #A3A3A3;
+}
 
 .small-art-flex-container {
     display: flex;
@@ -44,7 +46,7 @@
         }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
     .small-art {
         padding: 0px;
         width: 45%;

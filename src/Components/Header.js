@@ -27,7 +27,7 @@ function Header(props) {
     <header className="header">
       <div className="site-title">
           <h1>Nathan Francis</h1>
-          <p>Really Cool Subtitle<br/>{adminLogout}</p>
+          <p>Photographer / Sculptor<br/>{adminLogout}</p>
       </div>
       <div className="cart-icon">
           <Link to="/cart">
