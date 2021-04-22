@@ -2,9 +2,20 @@ import "./Header.css"
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {toggleMenu} from './../redux/reducers/artworkReducer';
+import { useMediaQuery } from 'react-responsive';
+import { useEffect } from "react";
 
 function Header(props) {
-  // console.log(props);
+  const isBigScreen = useMediaQuery({
+    query: '(min-width: 1200px)'
+  });
+
+  useEffect(() => {
+    if(isBigScreen && !props.menuDisplay) {
+      props.toggleMenu();
+    }
+  }, [isBigScreen]);
+
   let adminLogout;
   if (props.isAdmin) {
     adminLogout=<p>Admin - Logout</p>
@@ -38,7 +49,8 @@ function Header(props) {
 function mapStateToProps(state) {
   return {
     isAdmin: state.isAdmin,
-    shoppingCart: state.shoppingCart
+    shoppingCart: state.shoppingCart,
+    menuDisplay: state.menuDisplay
   }
 }
 
