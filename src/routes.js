@@ -9,6 +9,7 @@ import Newsletter from './Components/Newsletter';
 import SingleArt from './Components/Artworks/SingleArt'
 import Cart from './Components/Cart/Cart';
 import Confirmation from './Components/Cart/Confirmation';
+import Admin from './Components/Admin/Admin';
 
 export default (
     <Switch>
@@ -20,5 +21,6 @@ export default (
         <Route path="/single-art/:id" component={SingleArt}/>
         <Route path="/cart" component={Cart}/>
         <Route path="/confirmation" component={Confirmation}/>
+        <Route path="/admin-login" component={Admin}/>
     </Switch>
 )

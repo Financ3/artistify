@@ -6,6 +6,7 @@ const express = require('express');
 const artController = require('./controllers/artController');
 const subController = require('./controllers/subController');
 const checkController = require('./controllers/checkoutController');
+const authController = require('./controllers/authController');
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 
@@ -58,6 +59,9 @@ app.use(session({
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '../build/index.html'))
     });
+
+//auth endpoints
+    app.get("/auth/login", authController.login);
 
 
 //establish the database connection and start the server

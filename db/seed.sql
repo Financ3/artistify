@@ -4,7 +4,6 @@ DROP TABLE IF EXISTS subscribers;
 
 CREATE TABLE adminuser (
     id SERIAL PRIMARY KEY,
-    username TEXT NOT NULL,
     email TEXT NOT NULL,
     password TEXT NOT NULL
 );
@@ -26,8 +25,8 @@ CREATE TABLE subscribers (
 );
 
 --nates starting password: A23kD*1W
-INSERT INTO adminuser (username, email, password)
-VALUES ('nateFrancis', 'nate@email.com','$2a$09$k6zNkvve5LuwHmUVDqiLneA1KNPSKBp6yYMxz31LHrBXRME1fC9em');
+INSERT INTO adminuser (email, password)
+VALUES ('nate@email.com','$2a$09$k6zNkvve5LuwHmUVDqiLneA1KNPSKBp6yYMxz31LHrBXRME1fC9em');
 
 INSERT INTO artworks (title, description, media, smallPrice, medPrice, largePrice, featured)
 VALUES ('Arm Study', 'Instax instant film, 2021', 'https://artistcontent.s3.us-east-2.amazonaws.com/Arm+Study+%232.jpg', 5, 10, 15, TRUE),
