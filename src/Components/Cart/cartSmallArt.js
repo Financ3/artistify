@@ -1,12 +1,8 @@
 import './cartSmallArt.css';
 import {connect} from 'react-redux';
 import {removeFromCart} from './../../redux/reducers/artworkReducer';
-import { useEffect } from 'react';
 
 function CartSmallArt(props) {
-    // useEffect(() => {
-    //   console.log(props.cartItem);
-    // });
     /*  Example Object for a cart item
     {
         artworkId: 1,

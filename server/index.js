@@ -7,6 +7,7 @@ const artController = require('./controllers/artController');
 const subController = require('./controllers/subController');
 const checkController = require('./controllers/checkoutController');
 const authController = require('./controllers/authController');
+const awsController = require('./controllers/awsController');
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 
@@ -61,8 +62,13 @@ app.use(session({
     });
 
 //auth endpoints
-    app.get("/auth/login", authController.login);
+    app.post("/auth/login", authController.login);
+    app.post("/auth/logout", authController.logout);
 
+
+//aws endpoints
+    app.post("/api/addMedia", awsController.addMedia);
+    app.delete("/api/deleteMedia", awsController.deleteMedia);
 
 //establish the database connection and start the server
 massive({

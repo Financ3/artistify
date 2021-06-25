@@ -1,6 +1,7 @@
 import './About.css';
 import SmallArt from './Artworks/SmallArt'; 
 import { connect } from 'react-redux';
+import {Link}  from 'react-router-dom';
 
 function About(props) {
 
@@ -11,7 +12,7 @@ function About(props) {
   } 
 
   else if (props.asyncStatus==="rejected") {
-    featuredDisplay = <p>There was an error retreiving the artists data. Please contact the artist so they can resolve.</p>
+    featuredDisplay = <p>There was an error retreiving the artists data. Please <span className="link"><Link to="/contact">contact the artist</Link></span> so they can resolve.</p>
   } 
 
   else if (props.asyncStatus==="fulfilled") {

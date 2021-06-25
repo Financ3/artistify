@@ -18,7 +18,7 @@ function Header(props) {
 
   let adminLogout;
   if (props.isAdmin) {
-    adminLogout=<p>Admin - Logout</p>
+    adminLogout=<div><Link to="/admin"><span>Admin</span></Link></div>
   } else {
     adminLogout = null;
   }

@@ -28,7 +28,10 @@ function SingleArt(props) {
             <h2 className="view-header"><Link to="/artworks">&#12296;Back to Artworks:</Link></h2>:
               <h2 className="view-header"><Link to="/artworks">&#12296;Back to Artworks:</Link></h2>}
       
-      <h2>{singleArt?.title}</h2>
+      <h2>{singleArt?.title}{this.props.isAdmin?
+          <Link to="/edit-piece"><span className="edit-art-button">Edit</span></Link>:
+          null}
+      </h2>
       <div className="single-art-img-container">
           <img alt="art piece" src={singleArt.media}></img>
       </div>
@@ -52,6 +55,7 @@ function SingleArt(props) {
   
 function mapStateToProps(state) {
   return {
+    isAdmin: state.isAdmin,
     artworksArray: state.artworksArray,
     shoppingCart: state.shoppingCart,
     asyncStatus: state.asyncStatus

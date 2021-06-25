@@ -3,17 +3,14 @@ import React, {Component} from 'react';
 import SmallArt from './SmallArt';
 import {connect} from 'react-redux';
 import { getArtworkData } from '../../redux/reducers/artworkReducer';
+import {Link} from 'react-router-dom';
 
 class Artworks extends Component {
-
-  // componentDidMount() {
-  //   this.props.getArtworkData();
-  // }
 
   render() {
     return (
       <div className="artworks">
-        <h2 className="view-header">Artworks:</h2>
+        <h2 className="view-header"><span>Artworks:</span>{this.props.isAdmin?<Link to="/new-piece"><span className="add-new-art-button">Add New</span></Link>:null}</h2>
         <div className="gallery-description">
           <h2>In Place:</h2>
           <p>This set of pieces is called <b>In Place</b> and is a series of three works exploring my experiences of growing up gay in Utah, at the
@@ -38,7 +35,7 @@ class Artworks extends Component {
           {this.props.asyncStatus==="pending"?
             <p>Loading...</p>:
             this.props.asyncStatus==="rejected"?
-              <p>There was an error retreiving the artists data. Please contact the artist so they can resolve.</p>:
+              <p>There was an error retreiving the artists data. Please <span className="link"><Link to="/contact">contact the artist</Link></span> so they can resolve.</p>:
               this.props.asyncStatus==="fulfilled"?
                 this.props.artworksArray.map(singleArtwork => {
                   return <SmallArt artwork={singleArtwork} key={singleArtwork.id} isAdmin={false} source="artworks"/>}):

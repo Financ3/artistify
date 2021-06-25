@@ -10,6 +10,8 @@ import SingleArt from './Components/Artworks/SingleArt'
 import Cart from './Components/Cart/Cart';
 import Confirmation from './Components/Cart/Confirmation';
 import Admin from './Components/Admin/Admin';
+import EditPiece from './Components/Artworks/EditPiece';
+import NewPiece from './Components/Artworks/NewPiece';
 
 export default (
     <Switch>
@@ -21,6 +23,8 @@ export default (
         <Route path="/single-art/:id" component={SingleArt}/>
         <Route path="/cart" component={Cart}/>
         <Route path="/confirmation" component={Confirmation}/>
-        <Route path="/admin-login" component={Admin}/>
+        <Route path="/admin" component={Admin}/>
+        <Route path="/edit-piece" component={EditPiece}/>
+        <Route path="/new-piece" component={NewPiece}/>    
     </Switch>
 )

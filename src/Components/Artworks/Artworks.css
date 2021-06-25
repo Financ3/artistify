@@ -1,3 +1,13 @@
+.link {
+    color: #6b6a6a;
+}
+
+.add-new-art-button {
+    background-color: #A3A3A3;
+    margin: 5px 0px;
+    color: #f3f3f3;
+}
+
 @media (min-width: 1100px) {
     .artworks-flex-container {
         display: flex;

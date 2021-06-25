@@ -6,7 +6,7 @@ import Footer from './Components/Footer';
 import routes from './routes';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { Component } from 'react';
-import { getArtworkData, setCartData } from './redux/reducers/artworkReducer';
+import { getArtworkData, setCartData, setLoginStatus } from './redux/reducers/artworkReducer';
 import { connect } from 'react-redux';
 const Router = process.env.NODE_ENV === 'development' ? HashRouter : BrowserRouter;
 
@@ -25,6 +25,13 @@ class App extends Component {
     else {
       this.props.setCartData(JSON.parse(localStorage.getItem('cart')));
     }
+
+    //Check local storage for a logged in user
+    if(localStorage.getItem('isAdmin')) {
+      //if there is an admin logged in then update the redux store to reflect that
+      this.props.setLoginStatus(JSON.parse(true))
+    }
+    //if there isn't an admin logged in thendo nothing.
   }
 
   
@@ -53,4 +60,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps,{getArtworkData, setCartData})(App);
+export default connect(mapStateToProps,{getArtworkData, setCartData, setLoginStatus})(App);

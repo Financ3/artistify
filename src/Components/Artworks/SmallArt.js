@@ -1,10 +1,15 @@
 import './SmallArt.css';
 import { Link } from "react-router-dom";
+import {connect} from 'react-redux';
 
 function SmallArt(props) {
   return (
     <div className="small-art">
-        <h2>{props.artwork.title}</h2>
+        <h2>{props.artwork.title}
+        {this.props.isAdmin?
+          <Link to="/edit-piece"><span className="edit-art-button">Edit</span></Link>:
+            null}
+        </h2>
         <div className="small-art-flex-container">
           <div className="small-art-img-container">
             <Link to={{
@@ -21,12 +26,14 @@ function SmallArt(props) {
             
           </div>
         </div>
-        
-        
-        
-        
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    isAdmin: state.isAdmin,
+  }
+}
   
-export default SmallArt;
+export default connect(mapStateToProps)(SmallArt);
