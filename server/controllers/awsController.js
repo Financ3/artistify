@@ -5,8 +5,6 @@ const AWS = require('aws-sdk');
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env')});
 
-const {ACCESS_KEY_ID, SECRET_ACCESS_KEY} = process.env;
-
 const {AMAZON_PUB_KEY, AMAZON_SEC_KEY} = process.env;
 
 module.exports = {
