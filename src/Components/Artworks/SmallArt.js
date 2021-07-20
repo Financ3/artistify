@@ -6,7 +6,7 @@ function SmallArt(props) {
   return (
     <div className="small-art">
         <h2>{props.artwork.title}
-        {this.props.isAdmin?
+        {props.isAdmin?
           <Link to="/edit-piece"><span className="edit-art-button">Edit</span></Link>:
             null}
         </h2>

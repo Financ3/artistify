@@ -184,8 +184,7 @@ export default function artworkReducer(state=initialState, actionObj) {
             }
         case ADD_PIECE:
             //add the media to the S3 bucket
-            const {media} = actionObj.payload;
-            axios.post('/api/addMedia',{})
+            axios.post('/api/addMedia',{file: actionObj.payload.media, filename: actionObj.payload.media.name});
             //add the new piece to the Database
             axios.post('/api/artworks', actionObj.payload);
             //add the new piece to the redux state

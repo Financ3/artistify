@@ -26,7 +26,7 @@ function NewPiece(props) {
                 largePrice, 
                 featured
             };
-            console.log(newPiece.media);
+            props.addPiece(newPiece);
         }
     }
 
@@ -36,7 +36,7 @@ function NewPiece(props) {
       
       <h2>Title:<input onChange={ev => setTitleInput(ev.target.value)}></input></h2>
       <div className="single-art-img-container">
-          <p>Media:<input type="file" onChange={ev => setFile(ev.target.value)}></input></p>
+          <p>Media:<input type="file" onChange={ev => setFile(ev.target.files[0])}></input></p>
       </div>
       <p>Description:<input onChange={ev => setDescription(ev.target.value)}></input></p>
       <p>Price for small print: <input onChange={ev=>setSmallPrice(ev.target.value)}></input></p>
