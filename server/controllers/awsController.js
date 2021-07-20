@@ -1,5 +1,9 @@
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env')});
 // Import required AWS SDK clients and commands for Node.js.
 const AWS = require('aws-sdk');
+
+const {AMAZON_PUB_KEY, AMAZON_SEC_KEY} = process.env;
 
 module.exports = {
     addMedia: async function (req, res) {
@@ -8,8 +12,8 @@ module.exports = {
         const {file, filename} = req.body;
 
         AWS.config.update({
-            accessKeyId: 'AKIARD6LUUTFREA4QL4A',
-            secretAccessKey: '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'
+            accessKeyId: AMAZON_PUB_KEY,
+            secretAccessKey: AMAZON_SEC_KEY
         })
 
         const myBucket = new AWS.S3({
